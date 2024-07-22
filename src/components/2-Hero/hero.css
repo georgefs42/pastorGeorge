@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.hero-container {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: -30px;
+    margin-top: -30px;
+}
+
+.profile-picture img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+}
+
+.name {
+    font-family: 'Playwrite CU', cursive;
+    font-size: 3rem;
+    margin: 10px 0;
+    color: var(--title); /* Default to black for light mode */
+}
+
+.title {
+    font-size: 25px;
+    color: var(--subtitle);
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #555;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0077b5; /* Change color on hover */
+}
+
+.social-icons a:nth-child(1):hover {
+    color: #3b5998; /* Facebook color */
+}
+
+.social-icons a:nth-child(3):hover {
+    color: #69C9D0; /* TikTok color */
+}
+
+@media (max-width: 600px) {
+    .name{
+        font-size: 2rem;
+    }
+
+    .profile-picture img {
+        width: 200px;
+        height: 200px;
+    }
+}

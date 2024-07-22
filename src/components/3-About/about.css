@@ -1,0 +1,31 @@
+.about-section {
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+  }
+  
+  .about-section h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--title);
+  }
+  
+  .about-section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: var(--subtitle);
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+  
+  .about-section strong {
+    font-weight: bold;
+  }
+  
+  @media (max-size:600px){
+    .about-section p {
+        font-size: 1rem;
+  }
+  .about-section h1 {
+    font-size: 1.2rem;
+}
