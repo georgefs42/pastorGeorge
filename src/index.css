@@ -19,9 +19,11 @@ html{
 }
 
 :root{
-  --primary: #011543;
-  --secondary: rgba(30, 30, 35, 0.342);
-  --border: rgba(1, 1, 35, 0.4);
+  --primary: #000;
+  --secondary: rgb(24 24 27);
+  
+  --border: rgba(63, 63, 70, 0.4);
+  --menu: rgba(63, 63, 70, 0.875);
 
   --title: rgb(216, 216, 227);
   --subtitle: rgb(161 161 170);
@@ -37,7 +39,9 @@ html{
 .light{
   --primary: rgb(253 253 253);
   --secondary: rgb(255 255 255);
+
   --border: rgba(202, 202, 202, 0.518);
+  --menu: rgba(202, 202, 202, 0.867);
 
   --title: rgb(39 39 42);
   --subtitle: rgb(82 82 91);
@@ -105,8 +109,6 @@ button:disabled{
   opacity: 0.4;
   cursor: not-allowed;
 }
-
-
 
 @media (max-width: 1000px){
   .container{

@@ -1,56 +1,47 @@
+import React, { useRef, useState, useEffect } from "react";
+import { FaBars, FaTimes, FaMoon, FaSun } from "react-icons/fa";
 import "./header.css";
-import React, { useState, useEffect } from "react";
-import logo from "../../../public/images/logo.png"; // Adjust the path to your logo image as needed
 
 function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [theme, setTheme] = useState(
-    localStorage.getItem("currentMode") || "dark"
+  const navRef = useRef(null);
+  const [darkMode, setDarkMode] = useState(
+    () => localStorage.getItem("theme") === "dark"
   );
 
-  useEffect(() => {
-    document.body.classList.toggle("dark", theme === "dark");
-    document.body.classList.toggle("light", theme === "light");
-    localStorage.setItem("currentMode", theme);
-  }, [theme]);
-
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
+  const showNavBar = () => {
+    navRef.current.classList.toggle("responsive_nav");
   };
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setDarkMode((prevMode) => {
+      const newMode = !prevMode;
+      localStorage.setItem("theme", newMode ? "dark" : "light");
+      document.body.classList.toggle("light", newMode);
+      return newMode;
+    });
   };
 
+  useEffect(() => {
+    document.body.classList.toggle("light", darkMode);
+  }, [darkMode]);
+
   return (
-    <header className="header">
-      <nav className="navbar">
-        <button className="menu-toggle" onClick={toggleMenu}>
-          ☰
-        </button>
-        <ul className={`navbar-menu ${menuOpen ? "open" : ""}`}>
-          <li className="navbar-item">
-            <a href="#about">Om mig</a>
-          </li>
-          <li className="navbar-item">
-            <a href="#main">Tjänster</a>
-          </li>
-          <li className="navbar-item">
-          <li><a href="/documents/george_youssef_STHLM_CV.pdf" download>CV</a></li>
-          </li>
-          <li className="navbar-item">
-            <a href="#contact">Kontakt</a>
-          </li>
-        </ul>
-        <div className="navbar-logo">
-          <a href="/">
-            <img src={logo} alt="MyLogo" className="logo-image" />
-          </a>
-        </div>
-        <button className="theme-toggle" onClick={toggleTheme}>
-          {theme === "dark" ? "🌞" : "🌜"}
+    <header>
+      <nav ref={navRef}>
+        <a href="#about">About</a>
+        <a href="#main">Tjänster</a>
+        <a href="/documents/george_youssef_STHLM_CV.pdf" download>CV</a>
+        <a href="#contact">Kontakt</a>
+        <button className="nav-btn nav-close-btn" onClick={showNavBar}>
+          <FaTimes />
         </button>
       </nav>
+      <button className="nav-btn" onClick={showNavBar}>
+        <FaBars />
+      </button>
+      <button className="theme-toggle-btn" onClick={toggleTheme}>
+        {darkMode ? <FaSun /> : <FaMoon />}
+      </button>
     </header>
   );
 }

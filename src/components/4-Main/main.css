@@ -1,0 +1,110 @@
+.header {
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: -65px;
+}
+
+.navbar-logo {
+  display: flex;
+  order: 1;
+}
+
+.logo-image {
+  height: 100px;
+  width: auto;
+}
+
+.menu-toggle,
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--title);
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Default styles for menu items */
+.navbar-item {
+  padding: 0 50px;
+}
+
+.navbar-item a {
+  margin-top: 40px;
+  color: var(--subtitle);
+  text-decoration: none;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.navbar-item a:hover {
+  font-size: 1.5rem;
+  color: #0073e6;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 640px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navbar-menu {
+    display: none; /* Hide menu by default on small screens */
+    flex-direction: column;
+    width: 80%; /* Adjust the width to make the menu narrower */
+    max-width: 300px; /* Optional: Set a maximum width for the menu */
+    background-color: rgba(47, 47, 47, 0.363);
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    padding: 0;
+    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for better visibility */
+  }
+
+  .navbar-menu.open {
+    display: flex; /* Show menu when open */
+  }
+
+  .navbar-item {
+    margin: 0;
+  }
+
+  .navbar-item a {
+    display: block;
+    padding: 10px 20px;
+    text-align: left;
+    color: var(--text-color);
+    font-size: 1em;
+    cursor: pointer;
+  }
+
+  .menu-toggle {
+    display: block; /* Show menu toggle button */
+  }
+}
+
+/* Hide menu toggle button on larger screens */
+@media (min-width: 641px) {
+  .menu-toggle {
+    display: none; /* Hide menu toggle button */
+  }
+}
