@@ -26,7 +26,6 @@
 
 }
 
-
 .card-icon {
   font-size: 15em; /* Adjust the size of the icon */
   color: var(--title); /* Example color */
@@ -35,19 +34,18 @@
   justify-content: center; /* Center the icon horizontally */  
 }
 
-
-
 .icon {
   display: block;
 }
 
 .card-title {
-  font-size: 1.5em;
+  font-size: 1.6em;
   margin: 16px 0;
 }
 
 .card-description {
-  font-size: 1em;
+  font-size: 1.2em;
+  text-align: justify;
   color: #666;
 }
 
