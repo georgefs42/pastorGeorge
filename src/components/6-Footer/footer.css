@@ -51,6 +51,12 @@
   
   .social-item {
     margin: 0 10px;
+    transition: 0.8s;
+  }
+  .social-item:hover {
+    margin: 0 10px;
+    color: var(--blue);
+    font-size: 1.2rem;
   }
 
   .social-link {    
@@ -58,7 +64,7 @@
     text-decoration: none;
   }
   
-  .social-link:hover, .copyright-text a:hover {
+  .social-link:hover {
     color: #0073e6; /* Change color on hover */
   }
   
@@ -69,5 +75,10 @@
   .copyright-text, .copyright-text a {
     margin-top: -10px;    
     color: var(--subtitle);
+    transition: 0.8s;
   }
   
+  .copyright-text a:hover{
+    color: #0073e6;
+    font-size: 1.2rem;
+  }

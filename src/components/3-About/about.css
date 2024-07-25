@@ -10,12 +10,16 @@
     color: var(--title);
   }
   
-  .about-section p {
+  .about-section p, .about-section h3, .about-section a {
     line-height: 1.6;
     margin-bottom: 10px;
     color: var(--subtitle);
     font-size: 1.2rem;
     text-align: justify;
+  }
+
+  .about-section h1:hover, .about-section p:hover, .about-section h3:hover, .about-section a:hover{
+    color: var(--textHover);
   }
   
   .about-section strong {
@@ -23,10 +27,14 @@
   }
   
   @media (max-size:600px){
-    .about-section p {
-        font-size: 1rem;
+    .about-section h1 {
+      font-size: 2rem;
   }
-  .about-section h1 {
-    font-size: 1.2rem;
-}
+
+    .about-section p {
+        font-size: 1.3rem;
+  }
+
+
+
   }

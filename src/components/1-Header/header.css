@@ -83,6 +83,9 @@ header {
     visibility: visible;
     opacity: 1;
   }
+  header .nav-btn:hover {
+    color: var(--blue);
+  }
 
 
   header nav {
@@ -104,13 +107,14 @@ header {
 
   }
 
+
   header .responsive_nav {
     transform: none;
   }
 
   nav .nav-close-btn {
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     right: 2rem;
     color: red;
   }

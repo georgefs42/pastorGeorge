@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
 .hero-container {
     padding: 20px;
@@ -24,20 +25,21 @@
 }
 
 .title {
-    font-size: 25px;
+    font-size: 1.8rem;
     color: var(--subtitle);
     margin-bottom: 20px;
 }
 
 .social-icons a {
     margin: 0 10px;
-    color: #555;
-    font-size: 24px;
-    transition: color 0.3s;
+    color: var(--subtitle);
+    font-size: 1.8rem;
+    transition: 0.8s;
 }
 
 .social-icons a:hover {
-    color: #0077b5; /* Change color on hover */
+    color: #0077b5;
+    font-size: 1.9rem;
 }
 
 .social-icons a:nth-child(1):hover {
@@ -46,6 +48,17 @@
 
 .social-icons a:nth-child(3):hover {
     color: #69C9D0; /* TikTok color */
+    
+}
+
+.motto {
+    font-size: 1.3rem;
+    font-family: 'Playwrite CU', cursive;
+    color: var(--subtitle);
+  }
+
+  .motto:hover {
+    color: var(--textHover);
 }
 
 @media (max-width: 600px) {
@@ -53,8 +66,19 @@
         font-size: 2rem;
     }
 
+    .title{
+        font-size: 1.3rem;
+    }
+
+    .motto{
+        font-size: 1.2rem;
+    }
+
     .profile-picture img {
         width: 200px;
         height: 200px;
     }
+    
+
+
 }
