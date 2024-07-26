@@ -33,7 +33,7 @@ const Card: React.FC<CardProps> = ({ title, icon, description }) => {
 
 const Main: React.FC = () => {
   return (
-    <div className="main-container">
+    <div id="main" className="main-container">
       <h1 className="subtitle">Tjänster</h1> <br /> {/* Heading added here */}
       <div className="app-container">
         {cardsData.map((card, index) => (

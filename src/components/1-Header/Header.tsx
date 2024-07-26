@@ -28,7 +28,7 @@ function Header() {
   return (
     <header>
       <nav ref={navRef}>
-        <a href="#about">About</a>
+        <a href="#about">Om mig</a>
         <a href="#main">Tjänster</a>
         <a href="/documents/george_youssef_STHLM_CV.pdf" download>CV</a>
         <a href="#contact">Kontakt</a>
