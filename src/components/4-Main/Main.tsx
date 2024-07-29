@@ -1,8 +1,8 @@
 // Main.tsx
 import React from 'react';
 import './main.css';
-import cardsData from './cardsData'; // Import card data from the JS file
-import { FaChurch, FaHome, FaChild, FaChalkboardTeacher } from 'react-icons/fa'; // Import icons from react-icons
+import cardsData from './cardsData'; 
+import { FaChurch, FaHome, FaChild, FaChalkboardTeacher } from 'react-icons/fa';
 
 interface CardProps {
   title: string;
@@ -18,7 +18,7 @@ const iconMap: { [key: string]: React.ComponentType } = {
 };
 
 const Card: React.FC<CardProps> = ({ title, icon, description }) => {
-  const IconComponent = iconMap[icon] || FaChurch; // Default to FaChurch if icon is not found
+  const IconComponent = iconMap[icon] || FaChurch;
 
   return (
     <div className="card-container">
@@ -34,7 +34,7 @@ const Card: React.FC<CardProps> = ({ title, icon, description }) => {
 const Main: React.FC = () => {
   return (
     <div id="main" className="main-container">
-      <h1 className="subtitle">Tjänster</h1> <br /> {/* Heading added here */}
+      <h1 className="subtitle">Tjänster</h1> <br />
       <div className="app-container">
         {cardsData.map((card, index) => (
           <Card
@@ -49,4 +49,4 @@ const Main: React.FC = () => {
   );
 };
 
-export default Main;
+export default Main; 

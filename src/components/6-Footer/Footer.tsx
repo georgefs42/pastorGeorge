@@ -1,4 +1,4 @@
-import './footer.css';  // Import the CSS file
+import './footer.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faLinkedinIn, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import React from 'react';
@@ -12,7 +12,7 @@ function Footer() {
         <ul className="footer-menu">
           <li className="menu-item"><a href="#about">Om mig</a></li>
           <li className="menu-item"><a href="#main">Tjänster</a></li>
-          <li className="menu-item"><a href="/documents/george_youssef_STHLM_CV.pdf" download>CV</a></li>
+          <li className="menu-item"><a href="/documents/pastorGeorge_CV.pdf" download>CV</a></li>
           <li className="menu-item"><a href="#contact">Kontakt</a></li>
         </ul>
 

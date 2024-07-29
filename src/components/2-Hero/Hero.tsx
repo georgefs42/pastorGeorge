@@ -11,7 +11,7 @@ function Hero() {
   return (
     <div className="hero-container">
       <div className="profile-picture">
-        <img src="../../../public/images/g_avatar.png" alt="Profile" />
+        <img src="/images/g_avatar.png" alt="Profile" />
       </div>
       <h2 className="name">George Youssef</h2>
       <h3 className="title">Pastor i Equmeniakyrkan</h3>

@@ -37,7 +37,7 @@ function About() {
       <br />
       <h3>
         Tveka inte att kontakta mig och{" "}
-        <a href="/documents/george_youssef_STHLM_CV.pdf" download>
+        <a href="/documents/pastorGeorge_CV.pdf" download>
           Ladda ner mitt CV
         </a>
         . Om du har några frågor eller vill lära känna mig bättre, är du

@@ -4,11 +4,28 @@ import About from "./components/3-About/About";
 import Main from "./components/4-Main/Main";
 import Contact from "./components/5-Contact/Contact";
 import Footer from "./components/6-Footer/Footer";
-
-
+import { useState, useEffect } from "react";
+import { FaChevronUp } from "react-icons/fa";
 
 function App() {
- 
+  const [showScrollBtn, setShowScrollBtn] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowScrollBtn(true);
+      } else {
+        setShowScrollBtn(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <div id="up" className="container">
       <Header />
@@ -28,6 +45,12 @@ function App() {
 
       <Footer />
 
+      {/* Scroll to Top Button */}
+      {showScrollBtn && (
+        <a href="#up" className="scrollToTop" aria-label="Scroll to top">
+          <FaChevronUp size={24} />
+        </a>
+      )}
     </div>
   );
 }

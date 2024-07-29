@@ -30,7 +30,7 @@ function Header() {
       <nav ref={navRef}>
         <a href="#about">Om mig</a>
         <a href="#main">Tjänster</a>
-        <a href="/documents/george_youssef_STHLM_CV.pdf" download>CV</a>
+        <a href="/documents/pastorGeorge_CV.pdf" download>CV</a>
         <a href="#contact">Kontakt</a>
         <button className="nav-btn nav-close-btn" onClick={showNavBar}>
           <FaTimes />
@@ -46,4 +46,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Header
